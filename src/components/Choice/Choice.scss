@@ -1,0 +1,20 @@
+.choice {
+  background-image: url("../../assets/choice-container.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 61px;
+  width: 634px;
+  margin: 0px 15px;
+
+  &__text-container {
+    color: white;
+    margin: 0;
+    padding: 20px 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}

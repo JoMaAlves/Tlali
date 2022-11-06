@@ -1,0 +1,9 @@
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  &.day-1 {
+    background-image: url(../../assets/backgrounds/day-1-background.jpg);
+  }
+}

@@ -1,0 +1,37 @@
+.informative-container {
+  max-width: 1140px;
+  padding-top: 30px;
+  position: relative;
+  width: 100%;
+
+  &__name-container {
+    align-items: center;
+    background-image: url("../../assets/name-container.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    height: 61px;
+    left: 50px;
+    position: absolute;
+    top: 0;
+    width: 151px;
+
+    &__text {
+      margin: 0;
+    }
+  }
+
+  &__text-container {
+    background-image: url("../../assets/text-container.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 176px;
+
+    &__paragraph {
+      height: 106px;
+      margin: 0;
+      padding: 40px 50px 30px;
+    }
+  }
+}

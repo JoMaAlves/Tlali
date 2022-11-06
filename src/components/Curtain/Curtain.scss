@@ -1,0 +1,22 @@
+.curtain {
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  &__text-container {
+    background-image: url("../../assets/text-container.png");
+    background-size: stretch;
+    height: 400px;
+
+    &__paragraph {
+      height: 106px;
+      margin: 0;
+      padding: 40px 50px 30px;
+    }
+  }
+}

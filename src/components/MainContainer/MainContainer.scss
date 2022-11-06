@@ -1,0 +1,31 @@
+.main-container {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 126px;
+  position: fixed;
+  width: 1366px;
+
+  .informative-container {
+    position: absolute;
+    top: 0;
+  }
+
+  &__choices-container {
+    background-image: url("../../assets/choices-container.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    height: 274px;
+    width: 100%;
+
+    &__grid {
+      align-content: center;
+      display: grid;
+      grid-template: 80px 80px / 330px 330px 330px 330px;
+      justify-content: center;
+      margin-top: 80px;
+    }
+  }
+}
