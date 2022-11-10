@@ -1,0 +1,23 @@
+.day-end-page {
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  &__container {
+    background-image: url("../../assets/end-day-background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1366px;
+    height: 720px;
+
+    z-index: 20;
+  }
+}

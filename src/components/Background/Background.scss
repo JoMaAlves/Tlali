@@ -4,6 +4,22 @@
   height: 100vh;
 
   &.day-1 {
-    background-image: url(../../assets/backgrounds/day-1-background.jpg);
+    background-image: url(../../assets/backgrounds/background-1.jpg);
+  }
+
+  &.day-2 {
+    background-image: url(../../assets/backgrounds/background-2.jpg);
+  }
+
+  &.day-3 {
+    background-image: url(../../assets/backgrounds/background-3.jpg);
+  }
+
+  &.day-4 {
+    background-image: url(../../assets/backgrounds/background-4.jpg);
+  }
+
+  &.day-5 {
+    background-image: url(../../assets/backgrounds/background-5.jpg);
   }
 }
