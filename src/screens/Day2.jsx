@@ -8,6 +8,7 @@ export default function Day2({
   endGame,
   setEndDay2,
   riskFactor,
+  tool,
   onRiskFactor,
 }) {
   const [step, setStep] = useState(day2.InitialStep);
@@ -36,6 +37,7 @@ export default function Day2({
         onNextStep={handleChangeStep}
         step={step}
         onClick={handleClick}
+        tool={tool}
       />
     </>
   );

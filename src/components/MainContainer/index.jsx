@@ -9,6 +9,8 @@ export default function MainContainer({
   onNextStep,
   onClick,
   mode,
+  tool = "",
+  risk,
 }) {
   const [story, setStory] = useState(0);
   const [monologue, setMonologue] = useState("");
@@ -63,6 +65,18 @@ export default function MainContainer({
                 if (index === 2 && step.choices.length === 4)
                   gridPosition = [2, 1, 2, 2];
                 if (index === 3) gridPosition = [2, 3, 2, 4];
+
+                if (choice.requiredItem) {
+                  if (choice.requiredItem !== tool) {
+                    return;
+                  }
+                }
+
+                if (choice.risk) {
+                  if (!choice.risk.find((item) => item === risk)) {
+                    return;
+                  }
+                }
 
                 return (
                   <Choice

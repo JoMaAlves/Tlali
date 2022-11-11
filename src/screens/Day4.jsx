@@ -32,6 +32,7 @@ export default function Day4({ endDay, endGame, riskFactor, onRiskFactor }) {
         onNextStep={handleChangeStep}
         step={step}
         onClick={handleClick}
+        risk={riskFactor}
       />
     </>
   );

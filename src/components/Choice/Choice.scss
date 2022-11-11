@@ -7,6 +7,10 @@
   width: 634px;
   margin: 0px 15px;
 
+  &.d-none {
+    display: none;
+  }
+
   &__text-container {
     color: white;
     margin: 0;

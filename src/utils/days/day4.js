@@ -47,14 +47,14 @@ export const day4 = {
   choice_4: {
     choices: [
       {
-        value: 2,
-        text: "Tentar se aproximar dos homens",
+        risk: [3],
+        text: "São detectados pelos colonizadores e precisam fugir às pressas",
         monologue: "Talvez eles sejam mais legais.",
         nextStep: "choice_5",
       },
       {
-        value: 1,
-        text: "Se esconder até eles sairem",
+        risk: [0, 1, 2],
+        text: "Conseguem passar sem serem detectados pelos colonizadores",
         monologue: "Talvez seja a decisão mais prudente.",
         nextStep: "choice_6",
       },
@@ -65,7 +65,6 @@ export const day4 = {
 
   choice_5: {
     texts: [
-      "São detectados pelos coloniadores e precisam fugir às pressas.",
       "Demoram muito para despistarem os coloniadores e ficam muito exaustos. Encontram um ponto de descanso",
     ],
     nextStep: "endDay",
@@ -73,8 +72,7 @@ export const day4 = {
 
   choice_6: {
     texts: [
-      "Conseguem passar sem serem detectados pelos colonizadores",
-      "Seguindo por um caminho mais tranquilo até acharem um ponto para descanso",
+      "Seguem por um caminho mais tranquilo até acharem um ponto para descanso",
     ],
     nextStep: "endDay",
   },

@@ -12,7 +12,7 @@ export const day2 = {
     choices: [
       {
         value: 1,
-        text: "Voltar para a vila",
+        text: "Voltar para a casa",
         monologue:
           "Esta jornada está perigosa demais, precisamos voltar com mais pessoas, não podemos nos arriscar tanto.",
         nextStep: "choice_2",
@@ -27,14 +27,14 @@ export const day2 = {
       {
         value: 3,
         requiredItem: "axe",
-        text: "Ir até a vila por um atalho",
+        text: "Ir até a vila por um atalho, que bom que trouxemos o machado",
         monologue:
           "Existe um caminho que nos levará mais rapidamente até a vila, Ytzcoatl pode estar correndo perigo!",
         nextStep: "choice_4",
       },
     ],
     name: "Yoali",
-    text: "O que faremos agora? Se tivermos um machado podemos ir por aquele atalho!",
+    text: "O que faremos agora?",
   },
   choice_2: {
     texts: [
@@ -125,7 +125,6 @@ export const day2 = {
       "A família encontra-se muito exausta para continuar e resolve descansar numa caverna que encontram",
     ],
     nextStep: "endDay",
-    riskFactor: -1,
     endDayType: "initialStep_A",
   },
 
@@ -169,12 +168,11 @@ export const day2 = {
   },
   choice_4: {
     texts: [
-      "Desbravam um atalho menos conhecido a fim de chegar ainda mais rápido em buscar do pai.",
+      "Desbravam um atalho menos conhecido a fim de chegar ainda mais rápido em busca do pai.",
       "Acabam gastando mais energia pois precisam abrir parte do caminho, que possui mata fechada",
       "Ao chegarem na vila dão de caras com homens brancos, completamente diferentes do que eles conheciam, e claramente são hostis, já que não parecem felizes em ver a família ali.",
       "Todos veem apenas uma escolha: fugir.",
     ],
-    riskFactor: 1,
     nextStep: "choice_10",
   },
   endDay: {

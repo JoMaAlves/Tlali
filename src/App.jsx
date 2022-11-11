@@ -76,6 +76,7 @@ function App() {
             setEndDay2={setEndDay2}
             riskFactor={riskFactor}
             onRiskFactor={handleRiskFactor}
+            tool={tool}
           />
         );
         break;
