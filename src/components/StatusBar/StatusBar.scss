@@ -1,0 +1,53 @@
+.status-bar {
+  margin-right: 30px;
+
+  &__title {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/barra-title.png);
+    display: flex;
+    font-size: 20px;
+    height: 49px;
+    justify-content: center;
+    padding: auto;
+    text-align: center;
+    width: 150px;
+  }
+
+  &__container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/barra.png);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 380px;
+    height: 40px;
+    line-height: 20px;
+
+    span {
+      width: 70px;
+      text-align: center;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template: 40px / 1fr 1fr 1fr 1fr;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 40px;
+
+      &__marker {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/marker-status.png);
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 
 import Background from "./components/Background";
+import StatusBar from "./components/StatusBar";
 
-import MainPage from "./screens/MainPage";
+import MainPage from "./screens/MainPage/MainPage";
 import Day1 from "./screens/Day1";
 import Day2 from "./screens/Day2";
 import Day3 from "./screens/Day3";
@@ -24,11 +25,19 @@ function App() {
 
   const [endDay, setEndDay] = useState(false);
 
+  const restart = () => {
+    setTool("");
+    setFood(0);
+    setHealth(3);
+    setRiskFactor(0);
+  };
+
   const handleEndGame = () => {
     setDay(0);
   };
 
   const handleStartGame = () => {
+    restart();
     setDay(1);
   };
 
@@ -46,6 +55,12 @@ function App() {
     setEndDay(false);
   };
 
+  const handleRiskFactor = (value) => {
+    if (riskFactor < 3 && value !== 0) {
+      setRiskFactor(value);
+    }
+  };
+
   useEffect(() => {
     switch (day) {
       case 1:
@@ -60,7 +75,7 @@ function App() {
             endGame={handleEndGame}
             setEndDay2={setEndDay2}
             riskFactor={riskFactor}
-            onRiskFactor={setRiskFactor}
+            onRiskFactor={handleRiskFactor}
           />
         );
         break;
@@ -71,7 +86,7 @@ function App() {
             endDay={handleEndDay}
             endGame={handleEndGame}
             riskFactor={riskFactor}
-            onRiskFactor={setRiskFactor}
+            onRiskFactor={handleRiskFactor}
           />
         );
         break;
@@ -81,7 +96,7 @@ function App() {
             endDay={handleEndDay}
             endGame={handleEndGame}
             riskFactor={riskFactor}
-            onRiskFactor={setRiskFactor}
+            onRiskFactor={handleRiskFactor}
           />
         );
         break;
@@ -91,7 +106,7 @@ function App() {
             endDay={handleEndDay}
             endGame={handleEndGame}
             riskFactor={riskFactor}
-            onRiskFactor={setRiskFactor}
+            onRiskFactor={handleRiskFactor}
           />
         );
         break;
@@ -105,8 +120,30 @@ function App() {
     <div className="App">
       <Background day={day}>
         <div className="game-screen">
+          {!!day && (
+            <div className="status-container">
+              <StatusBar
+                title="Vitalidade"
+                levels={["Bem", "Cansados", "Exautos"]}
+                value={health}
+              />
+              <StatusBar
+                title="Fator de Risco"
+                levels={["Baixo", "Medio", "Alto"]}
+                value={riskFactor}
+              />
+            </div>
+          )}
+
           {dayPage}
-          {endDay && <DayEndPage day={day} onContinue={handleDayManagement} />}
+          {endDay && (
+            <DayEndPage
+              day={day}
+              onContinue={handleDayManagement}
+              food={food}
+              riskFactor={riskFactor}
+            />
+          )}
         </div>
       </Background>
     </div>

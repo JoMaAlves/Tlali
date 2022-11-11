@@ -2,6 +2,7 @@ import React from "react";
 import "./Choice.scss";
 
 export default function Choice({
+  choice,
   gridPosition,
   index,
   monologue,
@@ -12,7 +13,7 @@ export default function Choice({
   value,
 }) {
   const handleClick = () => {
-    onClick(value, index);
+    onClick(choice, index);
     onMouseLeave();
   };
 

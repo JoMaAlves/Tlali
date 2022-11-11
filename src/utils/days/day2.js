@@ -64,7 +64,6 @@ export const day2 = {
         text: "Esperar que eles saiam",
         monologue:
           "Talvez eles não demorem tanto para sair, podemos esperar até que garantida a nossa segurança.",
-        riskFactor: -1,
         nextStep: "choice_7",
       },
     ],

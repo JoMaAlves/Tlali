@@ -1,0 +1,38 @@
+.main-page {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  &__central-container {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: #d1b581;
+      font-size: 300px;
+      line-height: 300px;
+      margin: 125px 0px 100px;
+    }
+
+    .button {
+      color: #d1b581;
+      font-family: "Macondo", cursive;
+      font-size: 40px;
+      background-color: transparent;
+      border: 0;
+      margin: 0 auto;
+      width: 250px;
+
+      &:hover {
+        background-image: url("../../assets/asset-btn.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+    }
+  }
+}

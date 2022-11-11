@@ -21,6 +21,7 @@ export default function Day1({ endDay, setFood, setTool }) {
     if (step.nextStep === "endDay") {
       if (choice) {
         setTool(choice);
+        return;
       }
       setFood(foodValue + 1);
     }

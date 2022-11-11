@@ -14,7 +14,7 @@ export default function MainContainer({
   const [monologue, setMonologue] = useState("");
 
   const handleClick = (choice, index) => {
-    onClick(choice);
+    dayOne ? onClick(choice.value) : onClick(choice);
     dayOne
       ? onNextStep(step.nextStep)
       : onNextStep(step.choices[index].nextStep);
@@ -75,6 +75,7 @@ export default function MainContainer({
                     onMouseOver={handleMonologueOn}
                     text={choice.text}
                     value={choice.value}
+                    choice={choice}
                   />
                 );
               })}

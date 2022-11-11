@@ -3,6 +3,10 @@
   background-size: cover;
   height: 100vh;
 
+  &.day-0 {
+    background-image: url(../../assets/backgrounds/background-0.jpg);
+  }
+
   &.day-1 {
     background-image: url(../../assets/backgrounds/background-1.jpg);
   }

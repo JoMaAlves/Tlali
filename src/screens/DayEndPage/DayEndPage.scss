@@ -21,7 +21,8 @@
     z-index: 20;
     padding-top: 50px;
 
-    h1 {
+    h1,
+    h2 {
       margin: 0;
       text-align: center;
       margin-bottom: 10px;
@@ -38,22 +39,47 @@
       height: 60px;
       color: white;
       font-size: 20px;
+      margin-bottom: 20px;
     }
 
-    &__button {
-      background-color: transparent;
-      background-image: url("../../assets/continue-container.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      color: white;
-      height: 90px;
-      width: 200px;
-      border: 0;
-      padding: 0;
+    &__bottom-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
 
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
+      &__paper {
+        background-color: transparent;
+        background-image: url("../../assets/ornamentos2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 666px;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__button {
+        background-color: transparent;
+        background-image: url("../../assets/btn-small.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: white;
+        height: 90px;
+        width: 250px;
+        border: 0;
+        padding: 0;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
       }
     }
   }
